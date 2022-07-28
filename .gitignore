@@ -20,4 +20,8 @@
 # Go workspace file
 go.work
 
+# for go env
 .go-version
+
+# for debug
+__debug_bin

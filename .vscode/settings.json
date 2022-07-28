@@ -1,0 +1,5 @@
+{
+  "go.gopath": "~/go/1.18.4",
+  "go.goroot": "~/.goenv/versions/1.18.4",
+  "go.toolsEnvVars": {"GO111MODULE": "on"}
+}
