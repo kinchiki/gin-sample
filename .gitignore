@@ -25,3 +25,8 @@ go.work
 
 # for debug
 __debug_bin
+
+# image directory
+images/
+
+static/*
