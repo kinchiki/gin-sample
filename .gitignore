@@ -29,4 +29,4 @@ __debug_bin
 # image directory
 images/
 
-static/*
+sample1/static/*
