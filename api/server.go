@@ -12,8 +12,10 @@ func main() {
 
 	engine.Use(middleware.RecordUaAndTime)
 
-	bookEngine := engine.Group("/book") {
-		v1 := boolEngine.Group("/v1") {
+	bookEngine := engine.Group("/book")
+	{
+		v1 := bookEngine.Group("/v1")
+		{
 			v1.POST("/add", controller.BookAdd)
 			v1.GET("list", controller.BookList)
 			v1.PUT("update", controller.BookUpdate)
