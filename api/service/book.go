@@ -16,7 +16,7 @@ func (BookService) SetBook(book *model.Book) error {
 
 func (BookService) GetBookList() []model.Book {
 	tests := make([]model.Book, 0)
-	err := DbEngine.Distinct("id", "title", "contect").Limit(10, 0).Find(&tests)
+	err := DbEngine.Distinct("id", "title", "content").Limit(10, 0).Find(&tests)
 	if err != nil {
 		panic(err)
 	}
