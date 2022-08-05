@@ -17,7 +17,7 @@ func BookAdd(c *gin.Context) {
 	}
 
 	bookService := service.BookService{}
-	err = bookService.SetBook(*book)
+	err = bookService.SetBook(&book)
 	if err != nil {
 		c.String(http.StatusInternalServerError, "Server Error")
 		return
