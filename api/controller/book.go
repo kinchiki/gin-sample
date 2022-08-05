@@ -3,8 +3,8 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"qiita/model"
-	"qiita/service"
+	"github.com/kinchiki/gin-sample/api/model"
+	"github.com/kinchiki/gin-sample/api/service"
 	"strconv"
 )
 

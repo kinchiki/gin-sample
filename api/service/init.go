@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/go-xorm/xorm"
-	"qiita/model"
+	"github.com/kinchiki/gin-sample/api/model"
 	"log"
 )
 

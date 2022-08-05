@@ -1,7 +1,7 @@
 package service
 
 import (
-	"qiita/model"
+	"github.com/kinchiki/gin-sample/api/model"
 )
 
 type BookService struct {}

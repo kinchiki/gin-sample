@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
-	"qiita/controller"
-	"qiita/middleware"
+	"github.com/kinchiki/gin-sample/api/controller"
+	"github.com/kinchiki/gin-sample/api/middleware"
 )
 
 func main() {
