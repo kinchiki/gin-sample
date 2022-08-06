@@ -19,7 +19,7 @@ func main() {
 			v1.POST("/add", controller.BookAdd)
 			v1.GET("/list", controller.BookList)
 			v1.PUT("/update", controller.BookUpdate)
-			v1.DELETE("/delete", controller.BookDelete)
+			v1.DELETE("/delete/:id", controller.BookDelete)
 		}
 	}
 	engine.Run(":3000")
