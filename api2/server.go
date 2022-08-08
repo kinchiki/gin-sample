@@ -15,5 +15,14 @@ func main() {
 			"lastName": lastName,
 		})
 	})
+
+	serve.POST("/test", func(c *gin.Context) {
+		firstName := c.PostForm("first_name")
+		lastName := c.DefaultPostForm("last_name", "default_last_name")
+		c.JSON(http.StatusOK, gin.H {
+			"firstName": firstName,
+			"lastName": lastName,
+		})
+	})
 	serve.Run(":8081")
 }
