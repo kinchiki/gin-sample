@@ -5,6 +5,12 @@ import (
   "net/http"
 )
 
+type Person struct {
+	Age int `form:"age" validate:"required,gt=10,max=100"`
+	Name string `form:"name" validate:"required"`
+	Address string `form:"address" validate:"required"`
+}
+
 func main() {
 	serve := gin.Default()
 	serve.GET("/test", func(c *gin.Context) {
@@ -24,5 +30,15 @@ func main() {
 			"lastName": lastName,
 		})
 	})
+
+	serve.GET("/testing", func(c *gin.Context) {
+		var person Person
+		if err := c.ShouldBind(&person); err != nil {
+			c.JSON(500, gin.H{"msg:": err.Error()})
+			return
+		}
+		c.JSON(200, gin.H{"person": person})
+	})
+
 	serve.Run(":8081")
 }
